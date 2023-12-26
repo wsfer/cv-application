@@ -1,0 +1,54 @@
+.form-controller {
+  background-color: var(--primary);
+  width: 50%;
+}
+
+.form-controller__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-controller__button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.form-controller__button:hover,
+.form-controller__button:focus {
+  background-color: var(--accent);
+}
+
+.form-controller__button svg,
+.form-controller__button img {
+  width: 2rem;
+}
+
+.form-controller__button img {
+  margin-right: 1rem;
+}
+
+.form-controller__button svg {
+  margin-left: auto;
+  transition: transform 0.15s ease-in;
+}
+
+.form__container {
+  display: flex;
+}
+
+.form__col {
+  width: 50%;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
