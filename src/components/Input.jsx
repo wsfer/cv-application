@@ -1,7 +1,7 @@
 import '../styles/Input.css';
 
 // Reusable input
-function Input({ value, onChange, name, type = 'text' }) {
+function Input({ value, onChange, name, type = 'text', disabled = false }) {
   return (
     <div className="input">
       <label htmlFor={name}>
@@ -13,6 +13,8 @@ function Input({ value, onChange, name, type = 'text' }) {
         name={name}
         id={name}
         type={type}
+        disabled={disabled ? 'disabled' : ''}
+        aria-disabled={disabled ? 'true' : 'false'}
       />
     </div>
   );
