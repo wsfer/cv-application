@@ -1,0 +1,8 @@
+.resume__name {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.resume__subtitle {
+  border-bottom: 2px solid var(--font);
+}
