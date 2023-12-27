@@ -55,7 +55,11 @@ function ProjectsForm({ projects, updateResume, setIsOpen }) {
 
   return (
     <div>
-      <form onSubmit={handleAddProject} aria-label="Projects Form">
+      <form
+        className="form"
+        onSubmit={handleAddProject}
+        aria-label="Projects Form"
+      >
         <div className="form__container">
           <div className="form__col">
             <Input
@@ -80,10 +84,10 @@ function ProjectsForm({ projects, updateResume, setIsOpen }) {
           </div>
         </div>
         <div className="form__buttons">
-          <button type="button" onClick={setIsOpen}>
+          <button className="cancel-button" type="button" onClick={setIsOpen}>
             Cancel
           </button>
-          <button>Save</button>
+          <button className="confirm-button">Save</button>
         </div>
       </form>
       <section>

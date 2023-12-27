@@ -70,17 +70,16 @@ function GeneralForm({ resume, updateResume, setIsOpen }) {
               onChange={(event) => setSummaryValue(event.target.value)}
               name="summary"
               id="summary"
-              cols="30"
               rows="10"
             ></textarea>
           </div>
         </div>
       </div>
       <div className="form__buttons">
-        <button type="button" onClick={setIsOpen}>
+        <button className="cancel-button" type="button" onClick={setIsOpen}>
           Cancel
         </button>
-        <button>Save</button>
+        <button className="confirm-button">Save</button>
       </div>
     </form>
   );

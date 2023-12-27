@@ -6,7 +6,7 @@ function ActivitiesInput({
   handleDeleteActivity,
 }) {
   return (
-    <>
+    <div className="input">
       <label htmlFor="activity">Activities</label>
       <ul aria-label="Current activities">
         {currentActivities.map((activity, index) => (
@@ -29,7 +29,7 @@ function ActivitiesInput({
       <button type="button" onClick={handleAddActivity}>
         Add activity
       </button>
-    </>
+    </div>
   );
 }
 

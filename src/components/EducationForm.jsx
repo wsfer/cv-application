@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { dateToMonthYear, dateToMonthInput } from '../utils/dates';
+import { dateToMonthInput } from '../utils/dates';
 import Input from './Input';
 
 function EducationForm({ education, updateResume, setIsOpen }) {
@@ -50,7 +50,11 @@ function EducationForm({ education, updateResume, setIsOpen }) {
 
   return (
     <div>
-      <form onSubmit={handleAddCourse} aria-label="Experiences Form">
+      <form
+        className="form"
+        onSubmit={handleAddCourse}
+        aria-label="Experiences Form"
+      >
         <div>
           <Input
             value={nameValue}
@@ -76,7 +80,6 @@ function EducationForm({ education, updateResume, setIsOpen }) {
             disabled={isStudying}
           />
           <div>
-            <label htmlFor="studying">Is studying?</label>
             <input
               checked={isStudying ? true : false}
               onChange={(event) => setIsStudying(event.target.checked)}
@@ -84,13 +87,14 @@ function EducationForm({ education, updateResume, setIsOpen }) {
               name="studying"
               id="studying"
             />
+            <label htmlFor="studying">Is studying?</label>
           </div>
         </div>
         <div className="form__buttons">
-          <button type="button" onClick={setIsOpen}>
+          <button className="cancel-button" type="button" onClick={setIsOpen}>
             Cancel
           </button>
-          <button>Save</button>
+          <button className="confirm-button">Save</button>
         </div>
       </form>
       <section>

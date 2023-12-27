@@ -68,7 +68,11 @@ function ExperiencesForm({ experiences, updateResume, setIsOpen }) {
 
   return (
     <div>
-      <form onSubmit={handleAddExperience} aria-label="Experiences Form">
+      <form
+        className="form"
+        onSubmit={handleAddExperience}
+        aria-label="Experiences Form"
+      >
         <div className="form__container">
           <div className="form__col">
             <Input
@@ -95,7 +99,6 @@ function ExperiencesForm({ experiences, updateResume, setIsOpen }) {
               disabled={isCurrentJob}
             />
             <div>
-              <label htmlFor="current">Current job?</label>
               <input
                 checked={isCurrentJob ? true : false}
                 onChange={(event) => setIsCurrentJob(event.target.checked)}
@@ -103,6 +106,7 @@ function ExperiencesForm({ experiences, updateResume, setIsOpen }) {
                 name="current"
                 id="current"
               />
+              <label htmlFor="current">Current job?</label>
             </div>
           </div>
           <div className="form__col">
@@ -116,10 +120,10 @@ function ExperiencesForm({ experiences, updateResume, setIsOpen }) {
           </div>
         </div>
         <div className="form__buttons">
-          <button type="button" onClick={setIsOpen}>
+          <button className="cancel-button" type="button" onClick={setIsOpen}>
             Cancel
           </button>
-          <button>Save</button>
+          <button className="confirm-button">Save</button>
         </div>
       </form>
       <section>
