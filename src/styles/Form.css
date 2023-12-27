@@ -39,8 +39,13 @@
   transition: transform 0.15s ease-in;
 }
 
+.form {
+  padding: 1rem;
+}
+
 .form__container {
   display: flex;
+  gap: 1rem;
 }
 
 .form__col {

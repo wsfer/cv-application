@@ -1,3 +1,21 @@
+.input {
+  margin-bottom: 1em;
+}
+
 .input label {
   display: block;
+  margin-bottom: 0.2em;
+}
+
+.input input,
+.input textarea {
+  background-color: var(--background);
+  border: none;
+  padding: 0.5em 1em;
+  width: 100%;
+}
+
+.input textarea {
+  padding: 1em;
+  resize: none;
 }
