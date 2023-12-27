@@ -19,10 +19,12 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--font);
   background-color: var(--background);
+  margin: 0;
+  padding: 0;
 }
 
 #root {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -36,16 +38,17 @@ body {
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
+  padding: 2rem;
 }
 
 .main > section {
   box-shadow: 4px 4px 3px var(--shadow-color);
+  width: 100%;
 }
 
 .resume-container {
   background-color: var(--primary);
   padding: 2rem;
-  width: 50%;
 }
 
 .cancel-button,
@@ -70,4 +73,10 @@ body {
 .cancel-button:focus,
 .confirm-button:focus {
   background-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
 }
