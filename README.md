@@ -1,8 +1,11 @@
-# React + Vite
+# Resume Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React project which generate a resume template which I did as part of [The Odin Project](https://www.theodinproject.com) curriculum.
 
-Currently, two official plugins are available:
+## What I learned:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul>
+    <li>React basic knowledge</li>
+    <li>React state management</li>
+    <li>React re-render process</li>
+</ul>
