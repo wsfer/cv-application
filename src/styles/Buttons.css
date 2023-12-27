@@ -1,0 +1,30 @@
+.button,
+.cancel-button,
+.confirm-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  box-shadow: 2px 2px 1px var(--shadow-color);
+}
+
+.button {
+  background-color: var(--accent);
+}
+
+.cancel-button {
+  background-color: var(--warning);
+}
+
+.confirm-button {
+  background-color: var(--secondary);
+}
+
+.button:hover,
+.button:focus,
+.cancel-button:hover,
+.confirm-button:hover,
+.cancel-button:focus,
+.confirm-button:focus {
+  opacity: 0.6;
+}

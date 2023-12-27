@@ -4,6 +4,7 @@ import Resume from './components/Resume';
 import FormController from './components/FormController';
 import Footer from './components/Footer';
 import './App.css';
+import './styles/Buttons.css';
 
 const placeholderResume = {
   name: 'your name',

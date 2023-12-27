@@ -12,7 +12,11 @@ function ActivitiesInput({
         {currentActivities.map((activity, index) => (
           <li key={index}>
             {activity}
-            <button type="button" onClick={() => handleDeleteActivity(index)}>
+            <button
+              className="cancel-button"
+              type="button"
+              onClick={() => handleDeleteActivity(index)}
+            >
               Delete
             </button>
           </li>
@@ -26,7 +30,7 @@ function ActivitiesInput({
         cols="30"
         rows="10"
       ></textarea>
-      <button type="button" onClick={handleAddActivity}>
+      <button className="button" type="button" onClick={handleAddActivity}>
         Add activity
       </button>
     </div>
