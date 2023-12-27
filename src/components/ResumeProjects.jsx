@@ -7,12 +7,14 @@ function ResumeProjects({ projects }) {
     <>
       <h3 className="resume__subtitle">Projects</h3>
       {projects.map(({ id, name, link, activities }) => (
-        <div className="resume__project project" key={id}>
-          <h4 className="project__name">{name}</h4>
-          <a className="project__link" href={link}>
-            {link}
-          </a>
-          <ul className="project__activities">
+        <div className="resume__project" key={id}>
+          <p className="resume__row">
+            <span className="resume__bold-text">{name}</span>
+            <a className="resume__link" href={link}>
+              {link}
+            </a>
+          </p>
+          <ul className="resume__activities-list">
             {activities.map((activity, index) => (
               <li key={index}>{activity}</li>
             ))}

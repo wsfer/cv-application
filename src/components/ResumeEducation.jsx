@@ -13,14 +13,14 @@ function ResumeEducation({ education }) {
         const endDate = end ? dateToMonthYear(end) : 'present';
 
         return (
-          <div className="resume__course course" key={id}>
-            <h4 className="course__name">
-              <span>{name}</span> - {location}
-            </h4>
-            <span className="course__time">
+          <p className="resume__course resume__row" key={id}>
+            <span>
+              <span className="resume__bold-text">{name}</span> - {location}
+            </span>
+            <span className="resume__date">
               {startDate} - {endDate}
             </span>
-          </div>
+          </p>
         );
       })}
     </>

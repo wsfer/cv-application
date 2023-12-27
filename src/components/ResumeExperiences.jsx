@@ -13,14 +13,16 @@ function ResumeExperiences({ experiences }) {
         const endDate = end ? dateToMonthYear(end) : 'present';
 
         return (
-          <div className="resume__experience experience" key={id}>
-            <h4 className="experience__title">
-              <span>{title}</span>, {company}
-            </h4>
-            <p className="experience__time">
-              {startDate} - {endDate}
+          <div className="resume__experience" key={id}>
+            <p className="resume__row">
+              <span>
+                <span className="resume__bold-text">{title}</span>, {company}
+              </span>
+              <span className="resume__date">
+                {startDate} - {endDate}
+              </span>
             </p>
-            <ul className="experience__activities">
+            <ul className="resume__activities-list">
               {activities.map((activity, index) => (
                 <li key={index}>{activity}</li>
               ))}

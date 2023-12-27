@@ -8,19 +8,19 @@ function ResumeSkills({ tools, languages, frameworks }) {
       <h3 className="resume__subtitle">Skills</h3>
       {tools && (
         <p className="resume__skill">
-          <span>Tools: </span>
+          <span className="resume__bold-text">Tools: </span>
           {tools}
         </p>
       )}
       {languages && (
         <p className="resume__skill">
-          <span>Languages: </span>
+          <span className="resume__bold-text">Languages: </span>
           {languages}
         </p>
       )}
       {frameworks && (
         <p className="resume__skill">
-          <span>Frameworks: </span>
+          <span className="resume__bold-text">Frameworks: </span>
           {frameworks}
         </p>
       )}
