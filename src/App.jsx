@@ -7,11 +7,11 @@ import './App.css';
 import './styles/Buttons.css';
 
 const placeholderResume = {
-  name: 'your name',
+  name: 'Your name',
   contacts: {
     github: 'github.com/you',
-    linkedin: 'linkedin.com/asd',
-    email: 'email@email.com',
+    linkedin: 'linkedin.com/you',
+    email: 'your@email.com',
     phone: '',
     website: '',
   },
@@ -20,33 +20,33 @@ const placeholderResume = {
   experiences: [
     {
       id: crypto.randomUUID(),
-      title: 'job title',
+      title: 'Job title',
       company: 'company',
-      start: new Date(),
+      start: new Date('2022-08'),
       end: null,
       activities: ['activity 1', 'activity 2'],
     },
     {
       id: crypto.randomUUID(),
-      title: 'job 2',
-      company: 'company name',
-      start: new Date(),
-      end: new Date(),
-      activities: ['activity'],
+      title: 'Job title',
+      company: 'company',
+      start: new Date('2020-03'),
+      end: new Date('2022-08'),
+      activities: ['activity 1', 'activity 2', 'activity 3'],
     },
   ],
   projects: [
     {
       id: crypto.randomUUID(),
-      name: 'project',
+      name: 'Project',
       link: 'github.com/your/project',
       activities: ['activity 1', 'activity 2'],
     },
     {
       id: crypto.randomUUID(),
-      name: 'project name',
-      link: 'github.com/your/project-name',
-      activities: ['activity 1', 'activity'],
+      name: 'Project',
+      link: 'github.com/your/project',
+      activities: ['activity 1', 'activity 2'],
     },
   ],
   skills: {
@@ -57,17 +57,17 @@ const placeholderResume = {
   education: [
     {
       id: crypto.randomUUID(),
-      name: 'course name',
-      location: 'university name',
-      start: new Date(),
-      end: new Date(),
+      name: 'Course',
+      location: 'university',
+      start: new Date('2018-04'),
+      end: null,
     },
     {
       id: crypto.randomUUID(),
-      name: 'course',
-      location: 'nothing',
-      start: new Date(),
-      end: null,
+      name: 'Course',
+      location: 'university',
+      start: new Date('2012-01'),
+      end: new Date('2017-11'),
     },
   ],
 };
