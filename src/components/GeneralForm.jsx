@@ -60,7 +60,7 @@ function GeneralForm({ resume, updateResume, setIsOpen }) {
           />
           <Input
             value={websiteValue}
-            onChange={(event) => setWebsiteValue(event.target.alue)}
+            onChange={(event) => setWebsiteValue(event.target.value)}
             name="website"
           />
           <div className="input">
