@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { dateToMonthInput } from '../utils/dates';
 import Input from './Input';
+import FormSavedData from './FormSavedData';
 
 function EducationForm({ education, updateResume, setIsOpen }) {
   const [selectedCourseIndex, setSelectedCourseIndex] = useState(null);
@@ -97,31 +98,13 @@ function EducationForm({ education, updateResume, setIsOpen }) {
           <button className="confirm-button">Save</button>
         </div>
       </form>
-      <section>
-        <h3>Current courses</h3>
-        <button type="button" onClick={() => handleEditCourse(null)}>
-          New
-        </button>
-        {education.length > 0 ? (
-          education.map(({ id, name, location }, index) => {
-            return (
-              <div key={id}>
-                <p>
-                  <span>{name}</span> - {location}
-                </p>
-                <button type="button" onClick={() => handleEditCourse(index)}>
-                  Edit
-                </button>
-                <button type="button" onClick={() => handleDeleteCourse(index)}>
-                  Delete
-                </button>
-              </div>
-            );
-          })
-        ) : (
-          <p>empty</p>
-        )}
-      </section>
+      <FormSavedData
+        type="education"
+        data={education}
+        newData={() => handleEditCourse(null)}
+        editData={handleEditCourse}
+        deleteData={handleDeleteCourse}
+      />
     </div>
   );
 }

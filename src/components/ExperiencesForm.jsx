@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { dateToMonthYear, dateToMonthInput } from '../utils/dates';
 import Input from './Input';
 import ActivitiesInput from './ActivitiesInput';
+import FormSavedData from './FormSavedData';
 
 function ExperiencesForm({ experiences, updateResume, setIsOpen }) {
   const [selectedExperienceIndex, setSelectedExperienceIndex] = useState(null);
@@ -126,39 +127,13 @@ function ExperiencesForm({ experiences, updateResume, setIsOpen }) {
           <button className="confirm-button">Save</button>
         </div>
       </form>
-      <section>
-        <h3>Current experiences</h3>
-        <button type="button" onClick={() => handleEditExperience(null)}>
-          New
-        </button>
-        {experiences.length > 0 ? (
-          experiences.map(({ id, title, company, start, end }, index) => {
-            const startDate = dateToMonthYear(start);
-            const endDate = end ? dateToMonthYear(end) : 'present';
-            return (
-              <div key={id}>
-                <p>
-                  {title}, {company} - {startDate} - {endDate}
-                </p>
-                <button
-                  type="button"
-                  onClick={() => handleEditExperience(index)}
-                >
-                  Edit
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleDeleteExperience(index)}
-                >
-                  Delete
-                </button>
-              </div>
-            );
-          })
-        ) : (
-          <p>empty</p>
-        )}
-      </section>
+      <FormSavedData
+        type="experience"
+        data={experiences}
+        newData={() => handleEditExperience(null)}
+        editData={handleEditExperience}
+        deleteData={handleDeleteExperience}
+      />
     </div>
   );
 }

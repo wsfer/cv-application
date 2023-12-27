@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Input from './Input';
 import ActivitiesInput from './ActivitiesInput';
+import FormSavedData from './FormSavedData';
 
 function ProjectsForm({ projects, updateResume, setIsOpen }) {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
@@ -90,32 +91,13 @@ function ProjectsForm({ projects, updateResume, setIsOpen }) {
           <button className="confirm-button">Save</button>
         </div>
       </form>
-      <section>
-        <h3>Current projects</h3>
-        <button type="button" onClick={() => handleEditProjects(null)}>
-          New
-        </button>
-        {projects.length > 0 ? (
-          projects.map(({ id, name }, index) => {
-            return (
-              <div key={id}>
-                <p>{name}</p>
-                <button type="button" onClick={() => handleEditProject(index)}>
-                  Edit
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleDeleteProject(index)}
-                >
-                  Delete
-                </button>
-              </div>
-            );
-          })
-        ) : (
-          <p>empty</p>
-        )}
-      </section>
+      <FormSavedData
+        type="projects"
+        data={projects}
+        newData={() => handleEditProject(null)}
+        editData={handleEditProject}
+        deleteData={handleDeleteProject}
+      />
     </div>
   );
 }
