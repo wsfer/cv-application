@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import Header from './components/Header';
 import Resume from './components/Resume';
 import FormController from './components/FormController';
+import Footer from './components/Footer';
 import './App.css';
 
 const placeholderResume = {
@@ -73,12 +75,16 @@ function App() {
   const [resume, setResume] = useState(placeholderResume);
 
   return (
-    <main className="main">
-      <FormController resume={resume} setResume={setResume} />
-      <section className="resume-container" aria-label="Resume">
-        <Resume {...resume} />
-      </section>
-    </main>
+    <>
+      <Header />
+      <main className="main">
+        <FormController resume={resume} setResume={setResume} />
+        <section className="resume-container" aria-label="Resume">
+          <Resume {...resume} />
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
 
