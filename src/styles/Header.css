@@ -1,0 +1,9 @@
+.header {
+  background-color: var(--primary);
+  box-shadow: 4px 4px 2px var(--shadow-color);
+  padding: 2rem;
+}
+
+.header__title {
+  margin: 0;
+}
