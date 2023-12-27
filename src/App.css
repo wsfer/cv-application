@@ -12,6 +12,7 @@
   --secondary: #70a8fc;
   --warning: #f4a0a0;
   --accent: #f3d892;
+  --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -32,4 +33,41 @@ body {
 
 .main {
   display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main > section {
+  box-shadow: 4px 4px 3px var(--shadow-color);
+}
+
+.resume-container {
+  background-color: var(--primary);
+  padding: 2rem;
+  width: 50%;
+}
+
+.cancel-button,
+.confirm-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  box-shadow: 2px 2px 1px var(--shadow-color);
+}
+
+.cancel-button {
+  background-color: var(--warning);
+}
+
+.confirm-button {
+  background-color: var(--secondary);
+}
+
+.cancel-button:hover,
+.confirm-button:hover,
+.cancel-button:focus,
+.confirm-button:focus {
+  background-color: var(--accent);
 }

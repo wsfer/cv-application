@@ -75,7 +75,9 @@ function App() {
   return (
     <main className="main">
       <FormController resume={resume} setResume={setResume} />
-      <Resume {...resume} />
+      <section className="resume-container" aria-label="Resume">
+        <Resume {...resume} />
+      </section>
     </main>
   );
 }
