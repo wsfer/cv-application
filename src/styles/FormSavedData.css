@@ -1,0 +1,45 @@
+.saved-data {
+  padding: 1rem;
+}
+
+.saved-data__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-data__title {
+  font-size: 1.1rem;
+}
+
+.saved-data__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.saved-data__list-item {
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: space-between;
+}
+
+.saved-data__buttons {
+  display: flex;
+}
+
+.saved-data__icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.saved-data__icon-button:hover,
+.saved-data__icon-button:focus {
+  opacity: 0.6;
+}
+
+.saved-data__icon-button img {
+  width: 1.5rem;
+}
